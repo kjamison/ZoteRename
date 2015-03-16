@@ -1,0 +1,5 @@
+content	zoterename				chrome/content/
+locale	zoterename	en-US		chrome/locale/en-US/
+skin	zoterename	default		chrome/skin/default/
+
+overlay	chrome://zotero/content/zoteroPane.xul	chrome://zoterename/content/overlay.xul

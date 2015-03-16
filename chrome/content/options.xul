@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow id="zoterename-options"
+        title="ZoteRename Options"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<prefpane id="zr-options-pane" label="Options">
+		<preferences>
+			<preference id="pref_auto_rename" name="extensions.zoterename.auto_rename" type="bool"/>
+			<preference id="pref_collapse_search" name="extensions.zoterename.collapse_search" type="bool"/>
+			<preference id="pref_fullscreen_url" name="extensions.zoterename.fullscreen_url" type="string"/>
+			<preference id="pref_zotero_launch_pdf" name="extensions.zotero.launchNonNativeFiles" type="bool"/>
+			<preference id="pref_zotero_filename_format" name="extensions.zotero.attachmentRenameFormatString" type="string"/>
+		</preferences>
+
+    <checkbox preference="pref_auto_rename" id="zro_auto_rename" label="Automatically rename on import or drag/drop." />
+    <checkbox preference="pref_zotero_launch_pdf" id="zro_launch" label="Launch PDF files in OS instead of browser." />
+    
+    <separator orient="horizontal"/>
+    <groupbox>
+      <caption label="Filename Format"/>
+      <textbox preference="pref_zotero_filename_format" id="filename_format" /> 
+      <separator orient="horizontal"/>
+      <label value="Valid substitution markers:" />
+      <label value="%c - Author"/>
+      <label value="%y - Year"/>
+      <label value="%t - Title"/>
+      <separator orient="horizontal"/>
+      <label value="Fields can be truncated to a certain length by appending an integer"/>
+      <label value="within curly brackets -- e.g. %t{50} truncates the title to 50 characters." />
+      <separator orient="horizontal"/>
+      <label value="Note: This will affect ALL of Zotero's renaming operations." style="color:red"/>				
+    </groupbox>
+	</prefpane>
+</prefwindow>

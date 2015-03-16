@@ -1,0 +1,5 @@
+<!ENTITY zoterename.autorename_menuitem.name			      "Auto-Rename Attachment">
+<!ENTITY zoterename.rename_menuitem.name		  "Rename Attachment">
+<!ENTITY zoterename.change_title_menuitem.name		  "Edit Attachment Title">
+<!ENTITY zoterename.collections_menuitem.name		  "Show Collections">
+<!ENTITY zoterename.options_menuitem.name		  "ZoteRename Preferences...">

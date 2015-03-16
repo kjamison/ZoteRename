@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://zoterename/skin/overlay.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://zoterename/locale/zoterename.dtd">
+
+<overlay id="zoterename-overlay"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	
+	<menupopup id="zotero-itemmenu">
+		<!-- Make sure the menu separator for utilities is visible -->
+		<menuseparator id="zoterename_menu_sep"/>
+		<menuitem id="zoterename_menu_caption" label="ZoteRename:" disabled="true"
+				style="font-size: 80%; background: none; -moz-appearance: none;"/>
+				
+		<menuitem id="zoterename-collections_menuitem" label="&zoterename.collections_menuitem.name;"
+			oncommand="ZoteRename.showCollections();"/>
+			
+		<menuitem id="zoterename-autorename_menuitem" label="&zoterename.autorename_menuitem.name;"
+			oncommand="ZoteRename.autoRenameItem();"/>
+		<menuitem id="zoterename-rename_menuitem" label="&zoterename.rename_menuitem.name;"
+			oncommand="ZoteRename.renameItem();"/>
+		<menuitem id="zoterename-change_title_menuitem" label="&zoterename.change_title_menuitem.name;"
+			oncommand="ZoteRename.changeTitle();"/>
+	</menupopup>
+	
+	<menupopup id="zotero-tb-actions-popup">
+    <menuitem id="zoterename_tbmenu_options" insertafter="zotero-tb-actions-prefs" label="&zoterename.options_menuitem.name;"
+      oncommand="ZoteRename.openOptions();"/>
+	</menupopup>
+
+	<!-- Include the main extension logic -->
+	<script src="chrome://zotero/content/include.js"/>
+	<script src="chrome://zoterename/content/include.js"/>
+</overlay>
